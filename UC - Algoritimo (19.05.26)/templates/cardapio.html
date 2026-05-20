@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <title>Cardápio</title>
+
+  <style>
+    .imagem-pastel {
+      width: 300px;
+      height: 200px;
+    }
+
+    .imagem-esfirra {
+      width: 300px;
+      height: 200px;
+    }
+
+    .imagem-coxinha {
+      width: 300px;
+      height: 200px;
+    }
+
+    .imagem-pizza {
+      width: 300px;
+      height: 200px;
+    }
+
+    .imagem-hamburguer {
+      width: 300px;
+      height: 200px;
+    }
+
+    .imagem-bebidas {
+      width: 300px;
+      height: 200px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="{{url_for('FunçãoInicio')}}">FoodExpress</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{{url_for('FunçãoCardápio')}}">Cardápio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{url_for('FunçãoCliente')}}">Cliente</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{url_for('FunçãoContato')}}">Contato</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{url_for('FunçãoLanche')}}">Lanche</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{url_for('FunçãoPedidos')}}">Pedidos</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <h1>Cardápio da FoodExpress!</h1>
+
+  <p>🥟 Pastéis<br>
+    Pastel de Queijo — R$ 8,00<br>
+    Pastel de Carne — R$ 9,00<br>
+    Pastel de Frango com Catupiry — R$ 10,00<br>
+    Pastel de Pizza — R$ 10,00<br>
+    Pastel Especial da Casa — R$ 12,00<br></p>
+  <img src="{{ url_for('static', filename='Pastel.jpg') }}" class="imagem-pastel" alt="...">
+
+
+  <p>🥙 Esfirras<br>
+    Esfirra de Carne — R$ 6,00<br>
+    Esfirra de Frango — R$ 6,50<br>
+    Esfirra de Queijo — R$ 6,00<br>
+    Esfirra Calabresa — R$ 7,00<br>
+    Esfirra de Chocolate — R$ 7,50<br>
+  <p>
+    <img src="{{url_for('static', filename = 'Esfirra.jpg' )}}" class="imagem-esfirra" alt="...">
+
+  <p>🍗 Coxinhas<br>
+    Coxinha Tradicional — R$ 7,00<br>
+    Coxinha com Catupiry — R$ 8,50<br>
+    Mini Coxinha (unidade) — R$ 2,50<br>
+    Combo 10 Mini Coxinhas — R$ 20,00<br>
+    Combo 20 Mini coxinhas — R$ 30,00<br>
+  <p>
+    <img src="{{url_for('static', filename = 'Coxinha.jpg' )}}" class="imagem-coxinha" alt="...">
+
+  <p>🍕 Pizzas<br>
+    Mussarela — R$ 35,00<br>
+    Calabresa — R$ 38,00<br>
+    Frango com Catupiry — R$ 40,00<br>
+    Portuguesa — R$ 42,00<br>
+    Camarão — R$ 50,00<br></p>
+  <img src="{{url_for('static', filename = 'Pizza.jpg' )}}" class="imagem-pizza" alt="...">
+
+  <p>🍔 Hambúrgueres<br>
+    X-Burguer — R$ 15,00<br>
+    X-Salada — R$ 18,00<br>
+    X-Bacon — R$ 22,00<br>
+    X-Tudo — R$ 30,00<br>
+    X-Tudão — R$ 35,00<br></p>
+  <img src="{{url_for('static', filename = 'Hamburguer.jpg' )}}" class="imagem-hamburguer" alt="...">
+
+  <p>🥤 Bebidas<br>
+    Refrigerante Lata — R$ 6,00<br>
+    Suco Natural — R$ 8,00<br>
+    Água Mineral — R$ 4,00<br>
+    Milkshake — R$ 14,00<br>
+    Café — R$ 2,00<br></p>
+  <img src="{{url_for('static', filename = 'Bebidas.jpg' )}}" class="imagem-bebidas" alt="...">
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

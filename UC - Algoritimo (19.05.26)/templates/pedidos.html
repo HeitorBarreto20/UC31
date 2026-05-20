@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>Pedidos</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="{{url_for('FunçãoInicio')}}">FoodExpress</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{{url_for('FunçãoCardápio')}}">Cardápio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{url_for('FunçãoCliente')}}">Cliente</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{url_for('FunçãoContato')}}">Contato</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{url_for('FunçãoLanche')}}">Lanche</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{url_for('FunçãoPedidos')}}">Pedidos</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<h1>Pedidos:</h1>
+
+<p>Brenozo Guloso — X-Bacon + Refrigerante Lata — R$ 28,00<br>
+Mariana Souza — Pastel de Frango com Catupiry + Suco Natural — R$ 18,00<br>
+Pedro Henrique — Pizza Calabresa + Água Mineral — R$ 42,00<br>
+Ana Clara Lima — Esfirra de Chocolate + Café — R$ 9,50<br>
+João Victor Alves — X-Tudo + Milkshake — R$ 44,00<br>
+Beatriz Martins — Combo 10 Mini Coxinhas + Refrigerante Lata — R$ 26,00<br>
+Rafael Costa — Pastel Especial da Casa + Suco Natural — R$ 20,00<br>
+Fernanda Rocha — Pizza Portuguesa + Refrigerante Lata — R$ 48,00<br>
+Gustavo Ribeiro — X-Salada + Água Mineral — R$ 22,00<br>
+Camila Freitas — Esfirra Calabresa + Suco Natural — R$ 15,00<br>
+Felipe Mendes — Coxinha com Catupiry + Refrigerante Lata — R$ 14,50<br>
+Isabela Nunes — Pastel de Pizza + Milkshake — R$ 24,00<br>
+Thiago Carvalho — X-Tudão + Refrigerante Lata — R$ 41,00<br>
+Larissa Gomes — Pizza Frango com Catupiry + Suco Natural — R$ 48,00<br>
+Daniel Oliveira — Pastel de Carne + Café — R$ 11,00<br>
+Juliana Barros — Combo 20 Mini Coxinhas + Refrigerante Lata — R$ 36,00<br>
+Vinícius Azevedo — X-Burguer + Água Mineral — R$ 19,00<br>
+Sofia Teixeira — Esfirra de Queijo + Milkshake — R$ 20,00<br>
+Eduardo Fernandes — Pizza Camarão + Suco Natural — R$ 58,00<br>
+Nathalia Lopes — Coxinha Tradicional + Café — R$ 9,00</p>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+</body>
+</html>
