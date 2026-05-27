@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+        <h1>Formns</h1>
+        <form action = "{{url_for('receberdados')}}" method="post">
+        <label>Nome: </label>
+        <input type="text" name="nome"><br />
+        <label>E-mail: </label>
+        <input type="text" name="email"><br />
+        <label>Senha: </label>
+        <input type="password" name="senha"><br />
+
+        <br>
+        
+        <label>Estado: </label>
+        <select name="estado">
+            <option value="RN"> Rio Grande do Norte </option>
+            <option value="PB"> Paraíba </option>
+            <option value="PE"> Pernambuco </option>
+            <option value="CE"> Ceará </option>
+        </select>
+
+        <br>
+
+        <label>Qual a sua formação?:</label><br>
+        <input type="radio" name="formaçao" value="fundamental">Ensino Fundamental<br>
+        <input type="radio" name="formaçao" value="medio">Ensino Médio<br>
+        <input type="radio" name="formaçao" value="superior">Ensino Superior<br>
+
+        <br>
+
+        <label>Qual modalidade?:</label><br>
+        <input type="checkbox" name="modalidades" value="Natação">Natação<br>
+        <input type="checkbox" name="modalidades" value="Vôlei">Vôlei<br>
+        <input type="checkbox" name="modalidades" value="Futebol">Futebol<br>
+        <input type="checkbox" name="modalidades" value="Judô">Judô<br>
+
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
