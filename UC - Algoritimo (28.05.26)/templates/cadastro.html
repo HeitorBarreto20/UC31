@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    .erro{
+        background-color: #ffb3b3;
+        color: darkred;
+        padding: 10px;
+        border-radius: 8px;
+        margin-bottom: 15px;
+        width: 300px
+    }
+
+    .sucesso{
+        background-color: #b6ffb3;
+        color: darkgreen;
+        padding: 10px;
+        border-radius: 8px;
+        margin-bottom: 15px;
+        width: 300px
+    }
+</style>
+
+<body>
+
+    <h2>Cadastro de Usuário</h2>
+
+    {% with mensagens = get_flashed_messages(with_categories=true)%}
+        {% if mensagem %}
+            {% for categoria, mensagem in mensagens %}
+                <p>
+                    <strong>{{ Categoria }}:</strong> {{ Mensagem }}
+                </p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+    <form action = "{{url_for('cadastro')}}" method="POST">
+        <label>Nome: </label><br />
+        <input type="text" name="nome"><br />
+
+        <label>E-mail: </label><br />
+        <input type="email" name="email"><br />
+
+        <button type="submit">Cadastrar</button>
+    </form>
+</body>
+</html>
