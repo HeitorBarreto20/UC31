@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Inscrição Campeonato de Games</title>
+</head>
+<body>
+
+    <h1>Inscrição</h1>
+
+    <form method="POST">
+        <label>Nickname:</label><br>
+        <input type="text" name="nickname"><br><br>
+
+        <label>Jogo:</label><br>
+        <select name="jogo">
+            <option value="BS">Brawl Stars</option>
+            <option value="MC">Mo.co</option>
+            <option value="MS">Marvel Snap</option>
+            <option value="LOL">League of Legends</option>
+        </select><br><br>
+
+        <label>E-mail:</label><br>
+        <input type="email" name="email"><br><br>
+
+        <button type="submit">Inscrever-se</button>
+    </form>
+
+    <p>{{ mensagem }}</p>
+
+</body>
+</html>
