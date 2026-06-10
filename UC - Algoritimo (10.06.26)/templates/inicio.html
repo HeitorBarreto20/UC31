@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preferências do Usuário</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body class="{{ tema }}">
+
+    <div class="container">
+
+        <h1>Sistema de Preferências</h1>
+
+        {% if nome %}
+            <h2>Olá, {{ nome }}!</h2>
+            <p>Bem-vindo(a) de volta.</p>
+
+            {% if email %}
+                <p>Email cadastrado: {{ email }}</p>
+            {% endif %}
+
+        {% else %}
+            <h2>Seja bem-vindo!</h2>
+            <p>Cadastre suas informações abaixo.</p>
+        {% endif %}
+
+        <hr>
+
+        <h3>Cadastro</h3>
+
+        <form action="/salvar" method="POST">
+
+            <label>Nome:</label>
+            <input type="text"
+                   name="nome"
+                   required
+                   value="{{ nome if nome else '' }}">
+
+            <label>Email:</label>
+            <input type="email"
+                   name="email"
+                   required
+                   value="{{ email if email else '' }}">
+
+            <button type="submit">
+                Salvar Preferências
+            </button>
+
+        </form>
+
+        <hr>
+
+        <h3>Escolha o Tema</h3>
+
+        <a href="/tema/claro">
+            <button>Tema Claro</button>
+        </a>
+
+        <a href="/tema/escuro">
+            <button>Tema Escuro</button>
+        </a>
+
+    </div>
+
+</body>
+</html>
