@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Área Restrita</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1>Área Restrita</h1>
+
+    <p>Olá, {{ usuario }}!</p>
+
+    <a href="/logout">
+        <button>Sair</button>
+    </a>
+</div>
+
+</body>
+</html>
