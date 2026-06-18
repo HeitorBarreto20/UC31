@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Carrinho</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<header>
+<h1>Carrinho</h1>
+<nav>
+<a href="/cardapio">Cardápio</a>
+<a href="/favoritos">Favoritos</a>
+</nav>
+</header>
+
+<div class="container">
+
+{% if itens %}
+
+<div class="cards">
+
+{% for p in itens %}
+
+<div class="card">
+<img src="{{ p.img }}" class="img">
+<h3>{{ p.nome }}</h3>
+<p>R$ {{ "%.2f"|format(p.preco) }}</p>
+
+<a class="btn remove" href="/carrinho/remover/{{ p.id }}">
+🗑 Remover
+</a>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+<div class="total">
+TOTAL: R$ {{ "%.2f"|format(total) }}
+</div>
+
+{% else %}
+
+<div class="vazio">Carrinho vazio</div>
+
+{% endif %}
+
+</div>
+
+</body>
+</html>

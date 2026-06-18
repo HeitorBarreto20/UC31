@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Favoritos</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<header>
+<h1>Favoritos</h1>
+<nav>
+<a href="/cardapio">Cardápio</a>
+<a href="/carrinho">Carrinho</a>
+</nav>
+</header>
+
+<div class="container">
+
+<div class="cards">
+
+{% for p in pratos %}
+
+<div class="card">
+<img src="{{ p.img }}" class="img">
+<h3>{{ p.nome }}</h3>
+<p>R$ {{ "%.2f"|format(p.preco) }}</p>
+</div>
+
+{% endfor %}
+
+</div>
+
+</div>
+
+</body>
+</html>

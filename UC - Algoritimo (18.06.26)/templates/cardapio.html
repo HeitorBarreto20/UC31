@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Cardápio</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<header>
+<h1>Restaurante Gourmet</h1>
+<nav>
+<a href="/cardapio">Cardápio</a>
+<a href="/favoritos">Favoritos</a>
+<a href="/carrinho">Carrinho</a>
+</nav>
+</header>
+
+<div class="container">
+
+<div class="cards">
+
+{% for p in pratos %}
+
+<div class="card">
+
+<img src="{{ p.img }}" class="img">
+
+<h3>{{ p.nome }}</h3>
+<p>R$ {{ "%.2f"|format(p.preco) }}</p>
+
+<div class="botoes">
+
+<a class="btn fav" href="/favoritar/{{ p.id }}">
+{% if p.id in favoritos %}Desfavoritar{% else %}Favoritar{% endif %}
+</a>
+
+<a class="btn cart" href="/carrinho/add/{{ p.id }}">
+Adicionar
+</a>
+
+</div>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+</div>
+
+</body>
+</html>
